@@ -10,15 +10,27 @@ The analysis started with perparing the data which meant converting all data col
 
 The first analysis employed random oversampling.  Oversampling attempts to increae the size of the target group to make it easier to learn from.  This produced an accuracy of 63.5%.  Precision of the model was very poor though and many good loans were labelled as bad by the algorithm.  Recall, or sensitivity, was higher but at 62% it reflects that it flagged more loans as bad than actually were.   
 
+![Random Oversampling Classification Report](https://github.com/hal1277/credit_risk_analysis/blob/fa2a6c41097b21bf701409cc354adc9d04c22657/Images/random_oversampling.png)
+
 The second analysis used SMOTE oversampling.  This prdouced similar results to the random oversampling with an accuracy of 63%.  Precision was also very low and recall was higher becuase again it flagged more loans as bad than actually were.  This model also flagged a similarly large number of goods loans as bad as the random oversampling model.  
+
+![SMOTE Oversampling Classification Report](https://github.com/hal1277/credit_risk_analysis/blob/fa2a6c41097b21bf701409cc354adc9d04c22657/Images/SMOTE_oversampling.png)
 
 The third analysis used undersampling which reduces the number of samples of goods loans so they don't outweitgh the bad loan data so much.  This also produced an accuracy of 63% with low precision on the bad loans and a very poor recall, sensitivity, on the good loans with a very large number of them being flagged as bad loans by the model.  
 
+![Undersampling Classification Report](https://github.com/hal1277/credit_risk_analysis/blob/fa2a6c41097b21bf701409cc354adc9d04c22657/Images/undersampling.png)
+
 The fourth analysis used combination (over and under) sampling but resulted in an accuracy of only 52.9% again with low precision and simliar recall as the random oversampling and SMOTE oversampling models.  
 
-The fifth analysis used the Random Forest Classifier model which breaks the problem down into many smaller decision trees and takes a concensus.  It has a slightly higher accuracy of 66%.  But, precision was much higher at 78% as very few good loans were identified as bad by the model.  Recall was low at 32% because the model missed a large portion of the actual bad loans and flagged them as good.    
+![Combination Sampling Classification Report](https://github.com/hal1277/credit_risk_analysis/blob/fa2a6c41097b21bf701409cc354adc9d04c22657/Images/combination_sampling.png)
+
+The fifth analysis used the Random Forest Classifier model which breaks the problem down into many smaller decision trees and takes a concensus.  It has a slightly higher accuracy of 66%.  But, precision was much higher at 78% as very few good loans were identified as bad by the model.  Recall was low at 32% because the model missed a large portion of the actual bad loans and flagged them as good.   
+
+![Random Forest Classification Report](https://github.com/hal1277/credit_risk_analysis/blob/fa2a6c41097b21bf701409cc354adc9d04c22657/Images/random_forest_classifier.png)
 
 The sixth and final analysis was done using Easy Ensemble AdaBoost Classifier.  It has the highest accuracy at 92.5%.  Precision was low because a significant number of good loans were identified as bad by the model.  However, recall was very high as the model correctly identified nearly every bad loan.  
+
+![Easy Ensemble AdaBoost Classification Report](https://github.com/hal1277/credit_risk_analysis/blob/fa2a6c41097b21bf701409cc354adc9d04c22657/Images/easy_ensembe_adaboost_classifier.png)
 
 ## Summary
 
